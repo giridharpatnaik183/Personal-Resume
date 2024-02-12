@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        #downloadButton {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #downloadButton:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Name</h1>
+        <p>Web Developer</p>
+
+        <h2>Contact Information</h2>
+        <p>Email: your.email@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+
+        <h2>Education</h2>
+        <p>BS in Computer Science - Your University (Year)</p>
+
+        <h2>Skills</h2>
+        <p>HTML, CSS, JavaScript, React, etc.</p>
+
+        <h2>Experience</h2>
+        <p>Web Developer - Company Name (Year to Year)</p>
+
+        <h2>Projects</h2>
+        <p>Project 1 - Description</p>
+        <p>Project 2 - Description</p>
+
+        <!-- Use the provided download link for the resume PDF -->
+        <a id="downloadButton" href="docs/GIRIDHAR_SAI_PATNAIK_Resume.pdf" download="GIRIDHAR_SAI_PATNAIK_Resume.pdf">Download Resume</a>
+    </div>
+
+    <script>
+        // You can customize this function to fetch or generate the resume content
+        function downloadResume() {
+            // In this example, let's open a new window with a sample text
+            var resumeContent = "Your resume content goes here.\nFeel free to replace this with your actual content.";
+            var blob = new Blob([resumeContent], { type: "text/plain" });
+            var link = document.createElement("a");
+            link.download = "GIRIDHAR_SAI_PATNAIK_Resume.pdf";
+            link.href = URL.createObjectURL(blob);
+            link.click();
+        }
+    </script>
+</body>
+</html>
